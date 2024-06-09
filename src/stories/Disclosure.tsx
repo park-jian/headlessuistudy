@@ -1,10 +1,9 @@
 
-//import { CustomComponent } from "../src/components/PolymorphicComponent";
-import { Disclosure } from "../src/components/Disclosure/Disclosure";
-import { DisclosurePanel } from "../src/components/Disclosure/DisclosurePanel";
-import { DisclosureButton } from "../src/components/Disclosure/DisclosureButton";
+import { Disclosure } from "../../src/components/Disclosure/Disclosure";
+import { DisclosurePanel } from "../../src/components/Disclosure/DisclosurePanel";
+import { DisclosureButton } from "../../src/components/Disclosure/DisclosureButton";
 
-const App = () => {
+export const DisclosureFunc = () => {
 
   return (
     <>
@@ -25,4 +24,3 @@ const App = () => {
   );
 };
 
-export default App;
