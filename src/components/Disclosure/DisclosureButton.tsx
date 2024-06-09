@@ -1,12 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, ElementType, CSSProperties } from 'react';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { DisclosureContext } from './Disclosure';
 
-interface DisclosureButtonProps {
-  children: React.ReactNode;
+interface DisclosureRenderProps {
+  open: boolean;
+  close: boolean;
 }
 
-export const DisclosureButton: React.FC<DisclosureButtonProps> = ({ children }) => {
+interface DisclosureButtonProps {
+  children: React.ReactNode;
+  as?: ElementType;
+  style?: CSSProperties;
+}
+
+export const DisclosureButton: React.FC<DisclosureButtonProps> = ({ children, as: Element = 'button', style }) => {
   const context = useContext(DisclosureContext);
   if (!context) {
     throw new Error('DisclosureButton must be used within a Disclosure');
@@ -14,13 +21,13 @@ export const DisclosureButton: React.FC<DisclosureButtonProps> = ({ children }) 
 
   const { toggle } = context;
   const { isOpen } = context;
-  console.log(`토글:${isOpen}`);
+
   return (
-    <button onClick={toggle}>
+    <Element onClick={toggle} style={style}>
       {children}
-      {isOpen ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+      {/* {isOpen ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />} */}
       
       
-    </button>
+    </Element>
   );
 };
