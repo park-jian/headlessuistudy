@@ -12,12 +12,13 @@ interface DisclosureProps {
   children: ReactNode | ((props: DisclosureRenderProps) => ReactNode);
   as?: ElementType;
   style?: CSSProperties;
+  isOpen?: boolean;
 }
 
 export const DisclosureContext = createContext<DisclosureContextType | undefined>(undefined);
 
-export const Disclosure: React.FC<DisclosureProps> = ({ children, as: Element = 'div', style }) => { 
-  const [isOpen, setIsOpen] = useState(false);
+export const Disclosure: React.FC<DisclosureProps> = ({ children, as: Element = 'div', style, isOpen: initialIsOpen = false }) => { 
+  const [isOpen, setIsOpen] = useState(Boolean(initialIsOpen));
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -27,7 +28,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({ children, as: Element = 
 
   // Determine which render props to pass based on isOpen state
   const renderProps = isOpen ? { open: isOpen, close: !isOpen } : { open: isOpen, close: isOpen };
-  console.log(`isOpen:${isOpen}`);
+  console.log(`isOpen:${initialIsOpen}`);
   return (
     <DisclosureContext.Provider value={contextValue}>
       <Element id="disclosure1" data-open={isOpen} style={style}>
