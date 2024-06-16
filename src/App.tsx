@@ -1,51 +1,26 @@
 
 //import { CustomComponent } from "../src/components/PolymorphicComponent";
-import { Disclosure } from "../src/components/Disclosure/Disclosure";
-import { DisclosurePanel } from "../src/components/Disclosure/DisclosurePanel";
-import { DisclosureButton } from "../src/components/Disclosure/DisclosureButton";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import clsx from "clsx";
+// import { TabContainer } from "./components/TabControl/TabMenu";
+// import { TabMenu } from "./components/TabControl/TabComponent";
+// import { TabContent } from "./components/TabControl/TabContent";
+import {TabMenu} from "./components/TabControl/TabMenu";
+import dataList from "../src/components/TabControl/TabObj.json";
 
 const App = () => {
+  let idx = 0;
+const tabMenuJson = {
 
+}
   return (
     <>
-      <Disclosure isOpen={true}>
-        <DisclosureButton>default design</DisclosureButton>
-        <DisclosurePanel >
+      {/* <TabContainer isOpen={true} style={{border: '1px solid black'}}
+      datalist={dataList}>
+        <TabMenu style={{color: 'red'}}>탭메뉴</TabMenu>
+        <TabContent style={{border: '1px solid black'}}>
           음악듣기
-        </DisclosurePanel>
-      </Disclosure>
-      <Disclosure>
-        {({ open }) => (
-          <>
-            <div style={{color: 'red'}}>
-            <DisclosureButton as="span" style={{ background: 'pink', display: 'flex' }}>open상태 입니다.
-              <ChevronDownIcon className={clsx("w-5", open && "rotate-180")} />
-            </DisclosureButton>
-            <DisclosurePanel as="ul">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </DisclosurePanel>
-            </div>
-          </>
-        )}
-      </Disclosure>
-      <Disclosure>
-        <DisclosureButton>Terms</DisclosureButton>
-        <DisclosurePanel>
-          {({ close }) => (
-            <button
-              onClick={async () => {
-                await fetch('/accept-terms', { method: 'POST' })
-              }}
-            >
-              Read and accept
-            </button>
-          )}
-        </DisclosurePanel>
-      </Disclosure>
+        </TabContent>
+      </TabContainer> */}
+      <TabMenu />
       </>
   );
 };

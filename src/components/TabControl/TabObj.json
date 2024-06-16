@@ -1,0 +1,14 @@
+{
+  "dataList": {
+    "tabMenu": {
+      "0": "tab1",
+      "1": "tab2",
+      "2": "tab3"
+    },
+    "tabContent": {
+      "tab1": "tabcontent1",
+      "tab2": "tabcontent2",
+      "tab3": "tabcontent3"
+    }
+  }
+}
