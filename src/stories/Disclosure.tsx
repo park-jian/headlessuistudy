@@ -9,7 +9,7 @@ export const DisclosureFunc = () => {
 
   return (
     <>
-      <Disclosure>
+      <Disclosure isOpen={true}>
         <DisclosureButton>default design</DisclosureButton>
         <DisclosurePanel >
           음악듣기

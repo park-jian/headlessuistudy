@@ -1,0 +1,34 @@
+.tab-menu {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tab.active {
+  font-weight: bold;
+}
+
+.tab-content {
+  margin-top: 10px;
+}
+
+.tab-pane {
+  display: none;
+  padding: 10px;
+}
+
+.tab-pane.active {
+  display: block;
+}
