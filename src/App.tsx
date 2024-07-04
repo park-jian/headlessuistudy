@@ -4,13 +4,12 @@
 // import { TabMenu } from "./components/TabControl/TabComponent";
 // import { TabContent } from "./components/TabControl/TabContent";
 import {TabMenu} from "./components/TabControl/TabMenu";
-import dataList from "../src/components/TabControl/TabObj.json";
+import {TabContainer} from "./components/TabControl/TabContainer";
+import dataList from "../src/components/TabControl/TabObj.json"
 
 const App = () => {
-  let idx = 0;
-const tabMenuJson = {
-
-}
+  const data = dataList.dataList;
+  //console.log(data);
   return (
     <>
       {/* <TabContainer isOpen={true} style={{border: '1px solid black'}}
@@ -20,7 +19,10 @@ const tabMenuJson = {
           음악듣기
         </TabContent>
       </TabContainer> */}
-      <TabMenu />
+      {/* <TabMenu /> */}
+      <TabContainer dataList={data}>
+        <TabMenu />
+      </TabContainer>
       </>
   );
 };

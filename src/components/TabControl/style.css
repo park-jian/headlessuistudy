@@ -32,3 +32,11 @@
 .tab-pane.active {
   display: block;
 }
+
+.border-right-highlight {
+  border-right-width: 3px;
+}
+
+.border-left-highlight {
+  border-left-width: 3px;
+}

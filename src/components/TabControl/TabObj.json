@@ -1,14 +1,14 @@
 {
   "dataList": {
-    "tabMenu": {
-      "0": "tab1",
-      "1": "tab2",
-      "2": "tab3"
-    },
-    "tabContent": {
-      "tab1": "tabcontent1",
-      "tab2": "tabcontent2",
-      "tab3": "tabcontent3"
-    }
+    "tabs": [
+      { "id": "tab1", "text": "Tab 1" },
+      { "id": "tab2", "text": "Tab 2" },
+      { "id": "tab3", "text": "Tab 3" }
+    ],
+    "tabContent": [
+      { "id": "tab1", "content": "Content for Tab 1" },
+      { "id": "tab2", "content": "Content for Tab 2" },
+      { "id": "tab3", "content": "Content for Tab 3" }
+    ]
   }
 }

@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-
-interface Tab {
-  id: string;
-  text: string;
-}
+import { Tab } from './commonTypes';
 
 interface TabProps {
   tab: Tab;
