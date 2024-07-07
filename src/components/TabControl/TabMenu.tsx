@@ -28,6 +28,7 @@ export const TabMenu: React.FC = () => {
   const [tabContent, setTabContent] = useState<TabContent[]>(initialTabContents);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [previousMouseX, setPreviousMouseX] = useState<number | null>(null);
+  const [moveDirection, setMoveDirection] = useState<string>("");
 
   const handleDragStart = (index: number) => (event: React.DragEvent<HTMLDivElement>) => {
     event.dataTransfer.setData('index', index.toString());
@@ -56,22 +57,24 @@ export const TabMenu: React.FC = () => {
     setPreviousMouseX(event.clientX);
   };
   const handleMouseMove = (index: number) => (event: React.MouseEvent<HTMLDivElement>) => {
-    if (previousMouseX !== null) {
+    if (previousMouseX !== null) {console.log("index:",index);
       const currentMouseX = event.clientX;
       const tabElement = document.getElementById(`${tabs[index].id}`);
       if (tabElement) {
         if (currentMouseX > previousMouseX) {//3은 보정값
           // 오른쪽으로 이동
+          setMoveDirection("right");
           tabElement.classList.add('border-right-highlight');
           tabElement.classList.remove('border-left-highlight');
         } else if (currentMouseX < previousMouseX) {
           // 왼쪽으로 이동
+          setMoveDirection("left");
           tabElement.classList.add('border-left-highlight');
           tabElement.classList.remove('border-right-highlight');
         }
       }
+      setPreviousMouseX(event.clientX);
     }
-    setPreviousMouseX(event.clientX);
   };
 
   const handleMouseLeave = (index: number) => () => {
