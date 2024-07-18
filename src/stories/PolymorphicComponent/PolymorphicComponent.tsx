@@ -1,5 +1,5 @@
 
-import { CustomComponent } from "../../src/components/PolymorphicComponent";
+import { CustomComponent } from "../../../src/components/PolymorphicComponent";
 
 export const PolymorphicComponent = () => {
 

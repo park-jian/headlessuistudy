@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 300px;
   border: 1px solid #ccc;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .tabs {
@@ -39,4 +39,11 @@
 
 .border-left-highlight {
   border-left-width: 3px;
+}
+.custom-drag-image {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 1000;
+  border: 1px solid black;
 }

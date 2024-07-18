@@ -1,7 +1,7 @@
 
-import { Disclosure } from "../../src/components/Disclosure/Disclosure";
-import { DisclosurePanel } from "../../src/components/Disclosure/DisclosurePanel";
-import { DisclosureButton } from "../../src/components/Disclosure/DisclosureButton";
+import { Disclosure } from "../../../src/components/Disclosure/Disclosure";
+import { DisclosurePanel } from "../../../src/components/Disclosure/DisclosurePanel";
+import { DisclosureButton } from "../../../src/components/Disclosure/DisclosureButton";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 

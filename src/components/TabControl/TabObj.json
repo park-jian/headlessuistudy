@@ -1,6 +1,6 @@
 {
   "dataList": {
-    "tabs": [
+    "tab": [
       { "id": "tab1", "text": "Tab 1" },
       { "id": "tab2", "text": "Tab 2" },
       { "id": "tab3", "text": "Tab 3" }

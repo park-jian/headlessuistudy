@@ -1,11 +1,11 @@
 {
   "dataList": {
-    "tabs": [
+    "Tab": [
       { "id": "tab1", "text": "Tab 1" },
       { "id": "tab2", "text": "Tab 2" },
       { "id": "tab3", "text": "Tab 3" }
     ],
-    "tabContent": [
+    "TabContent": [
       { "id": "tab1", "content": "Content for Tab 1" },
       { "id": "tab2", "content": "Content for Tab 2" },
       { "id": "tab3", "content": "Content for Tab 3" }
