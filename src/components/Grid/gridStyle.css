@@ -1,0 +1,21 @@
+.gridLayer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.grid-header, .grid-content, .grid-row {
+  display: contents;
+}
+
+.grid-header > div, .grid-row > div {
+  padding: 8px;
+  background-color: white;
+}
+
+.grid-header > div {
+  font-weight: bold;
+  background-color: #e0e0e0;
+}
